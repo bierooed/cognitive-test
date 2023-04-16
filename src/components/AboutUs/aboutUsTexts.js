@@ -1,4 +1,4 @@
-const aboutUsTexts = {
+export const aboutUsTexts = {
   fullText: `In today's society, more and more attention is being paid to child
     development and education. One of the most important aspects of a
     child's development is the assessment of his or her cognitive abilities,
@@ -15,4 +15,9 @@ const aboutUsTexts = {
     cognitive abilities of children is the Kaufman test.`,
 };
 
-export default aboutUsTexts;
+export const scientificBasisTexts = {
+  fullText:
+    "The Kaufman test is based on the Cattell-Horn-Carroll (CHC) theory of cognitive abilities, which posits that intelligence is comprised of a number of different abilities, such as fluid reasoning, crystallized intelligence, and visual processing. The Kaufman test has been extensively researched and validated, and is considered to have a strong scientific basis. It has been shown to be reliable and valid in a variety of populations, including children with learning disabilities and gifted children. However, like any psychological assessment tool, the KABC should be used in conjunction with other sources of information, such as interviews with parents and teachers, to provide a comprehensive understanding of a child's strengths and weaknesses.",
+  description:
+    "The web application is based on scientific research by Alan S. Kaufman and Nadine L. Kaufman",
+};

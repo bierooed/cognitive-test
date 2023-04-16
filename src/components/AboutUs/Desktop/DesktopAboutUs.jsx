@@ -1,11 +1,12 @@
 import React from "react";
 import aboutUsIllustration from "../aboutUsIllustration.png";
-import aboutUsTexts from "../aboutUsTexts";
+import scienceIllustration from "../science.png";
+import { aboutUsTexts, scientificBasisTexts } from "../aboutUsTexts";
 import DesktopInfoBlock from "./DesktopInfoBlock";
 
 export default function DesktopAboutUs() {
   return (
-    <div className="md:flex flex-col xs: hidden">
+    <div className="md:flex items-center flex-col xs: hidden">
       <div className="md:flex flex-col items-center">
         <DesktopInfoBlock
           illustration={aboutUsIllustration}
@@ -19,6 +20,11 @@ export default function DesktopAboutUs() {
           Read more at Wikipedia
         </a>
       </div>
+
+      <DesktopInfoBlock
+        illustration={scienceIllustration}
+        text={scientificBasisTexts.fullText}
+      />
     </div>
   );
 }
