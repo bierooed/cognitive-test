@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import aboutUsIllustration from "../aboutUsIllustration.png";
-import scienceIllustration from "../science.png";
+import aboutUsIllustration from "../illustrations/aboutUsIllustration.png";
+import scienceIllustration from "../illustrations/science.png";
 import { aboutUsTexts, scientificBasisTexts } from "../aboutUsTexts";
 import MobileInfoBlock from "./MobileInfoBlock";
 import MobilePopupInfo from "./MobilePopupInfo";

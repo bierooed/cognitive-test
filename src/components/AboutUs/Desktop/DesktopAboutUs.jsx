@@ -1,6 +1,6 @@
 import React from "react";
-import aboutUsIllustration from "../aboutUsIllustration.png";
-import scienceIllustration from "../science.png";
+import aboutUsIllustration from "../illustrations/aboutUsIllustration.png";
+import scienceIllustration from "../illustrations/science.png";
 import { aboutUsTexts, scientificBasisTexts } from "../aboutUsTexts";
 import DesktopInfoBlock from "./DesktopInfoBlock";
 import Link from "../Link";
