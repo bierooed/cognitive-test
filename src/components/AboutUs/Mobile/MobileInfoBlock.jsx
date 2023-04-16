@@ -15,7 +15,7 @@ export default function MobileInfoBlock({
         <img className="w-96" src={illustration} alt="" />
       </div>
       <div className="p-5">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight">{heading}</h5>
+        <h5 className="mb-2 text-2xl tracking-tight">{heading}</h5>
         <p className="mb-3 font-thin">{description}</p>
         {!!handleFunction && (
           <button

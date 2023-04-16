@@ -20,7 +20,7 @@ export default function MobileAboutUs() {
           <MobileInfoBlock
             illustration={aboutUsIllustration}
             text={aboutUsTexts.fullText}
-            heading="Kaufman test"
+            heading={aboutUsTexts.heading}
             link="https://en.wikipedia.org/wiki/Kaufman_Assessment_Battery_for_Children"
             linkText="Read more in Wikipedia"
             description={aboutUsTexts.description}
@@ -29,7 +29,7 @@ export default function MobileAboutUs() {
           <MobileInfoBlock
             illustration={scienceIllustration}
             text={scientificBasisTexts.fullText}
-            heading="Scientific basis"
+            heading={scientificBasisTexts.heading}
             link="https://www.sciencedirect.com/topics/nursing-and-health-professions/kaufman-assessment-battery-for-children"
             linkText="Read more in Science Direct"
             description={scientificBasisTexts.description}

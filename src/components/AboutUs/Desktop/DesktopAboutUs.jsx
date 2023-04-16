@@ -10,7 +10,9 @@ export default function DesktopAboutUs() {
     <div className="md:flex items-center flex-col xs: hidden">
       <DesktopInfoBlock
         illustration={aboutUsIllustration}
+        heading={aboutUsTexts.heading}
         text={aboutUsTexts.fullText}
+        description={aboutUsTexts.description}
       />
       <Link
         text="Read more in Wikipedia"
@@ -27,6 +29,7 @@ export default function DesktopAboutUs() {
       </div>
       <DesktopInfoBlock
         illustration={scienceIllustration}
+        heading={scientificBasisTexts.heading}
         text={scientificBasisTexts.fullText}
       />
       <Link
