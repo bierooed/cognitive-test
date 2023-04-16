@@ -3,27 +3,35 @@ import aboutUsIllustration from "../aboutUsIllustration.png";
 import scienceIllustration from "../science.png";
 import { aboutUsTexts, scientificBasisTexts } from "../aboutUsTexts";
 import DesktopInfoBlock from "./DesktopInfoBlock";
+import Link from "../Link";
 
 export default function DesktopAboutUs() {
   return (
     <div className="md:flex items-center flex-col xs: hidden">
-      <div className="md:flex flex-col items-center">
-        <DesktopInfoBlock
-          illustration={aboutUsIllustration}
-          text={aboutUsTexts.fullText}
-        />
-        <a
-          target="_blank"
-          className="mt-6 font-medium text-blue-600 dark:text-blue-500 hover:underline"
-          href="https://en.wikipedia.org/wiki/Kaufman_Assessment_Battery_for_Children"
+      <DesktopInfoBlock
+        illustration={aboutUsIllustration}
+        text={aboutUsTexts.fullText}
+      />
+      <Link
+        text="Read more in Wikipedia"
+        link="https://en.wikipedia.org/wiki/Kaufman_Assessment_Battery_for_Children"
+      />
+      <div class="inline-flex items-center justify-center w-full">
+        <hr class="w-1/2 h-px my-16 border-gray-300" />
+        <span
+          style={{ backgroundColor: "#f8f8f8" }}
+          class="absolute px-3 italic"
         >
-          Read more at Wikipedia
-        </a>
+          and
+        </span>
       </div>
-
       <DesktopInfoBlock
         illustration={scienceIllustration}
         text={scientificBasisTexts.fullText}
+      />
+      <Link
+        text="Read more in Science Direct"
+        link="https://www.sciencedirect.com/topics/nursing-and-health-professions/kaufman-assessment-battery-for-children"
       />
     </div>
   );

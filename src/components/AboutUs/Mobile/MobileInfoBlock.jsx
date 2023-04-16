@@ -4,6 +4,7 @@ export default function MobileInfoBlock({
   illustration,
   text,
   link,
+  linkText,
   heading,
   description,
   handleFunction,
@@ -18,7 +19,7 @@ export default function MobileInfoBlock({
         <p className="mb-3 font-thin">{description}</p>
         {!!handleFunction && (
           <button
-            onClick={() => handleFunction(true, { text, link })}
+            onClick={() => handleFunction(true, { text, link, linkText })}
             className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-500 cursor-pointer"
           >
             Read more
