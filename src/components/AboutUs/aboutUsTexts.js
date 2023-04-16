@@ -19,7 +19,7 @@ export const aboutUsTexts = {
 export const scientificBasisTexts = {
   heading: "Scientific basis",
   fullText:
-    "The Kaufman test is based on the Cattell-Horn-Carroll (CHC) theory of cognitive abilities, which posits that intelligence is comprised of a number of different abilities, such as fluid reasoning, crystallized intelligence, and visual processing. The Kaufman test has been extensively researched and validated, and is considered to have a strong scientific basis. It has been shown to be reliable and valid in a variety of populations, including children with learning disabilities and gifted children. However, like any psychological assessment tool, the KABC should be used in conjunction with other sources of information, such as interviews with parents and teachers, to provide a comprehensive understanding of a child's strengths and weaknesses.",
+    "The Kaufman test is based on the Cattell-Horn-Carroll (CHC) theory of cognitive abilities, which posits that intelligence is comprised of a number of different abilities, such as fluid reasoning, crystallized intelligence, and visual processing. The Kaufman test has been extensively researched and validated, and is considered to have a strong scientific basis. It has been shown to be reliable and valid in a variety of populations, including children with learning disabilities and gifted children. However, like any psychological assessment tool, the KABC should be used in conjunction with other sources of information, such as interviews with parents and teachers, to provide a comprehensive understanding of a child's strengths and weaknesses. ",
   description:
     "The web application is based on scientific research by Alan S. Kaufman and Nadine L. Kaufman",
 };
