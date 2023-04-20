@@ -1,12 +1,12 @@
-import { useState } from "react";
+import React from "react";
 import "./App.css";
-import AboutUs from "./components/AboutUs/AboutUs";
 import Footer from "./components/Footer";
+import Main from "./components/Main";
 
 function App() {
   return (
     <div className="text-center p-2">
-      <AboutUs />
+      <Main />
       <Footer />
     </div>
   );
