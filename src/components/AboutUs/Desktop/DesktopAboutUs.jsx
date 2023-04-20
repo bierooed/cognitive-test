@@ -18,11 +18,11 @@ export default function DesktopAboutUs() {
         text="Read more in Wikipedia"
         link="https://en.wikipedia.org/wiki/Kaufman_Assessment_Battery_for_Children"
       />
-      <div class="inline-flex items-center justify-center w-full">
-        <hr class="w-1/2 h-px my-16 border-gray-300" />
+      <div className="inline-flex items-center justify-center w-full">
+        <hr className="w-1/2 h-px my-16 border-gray-300" />
         <span
           style={{ backgroundColor: "#f8f8f8" }}
-          class="absolute px-3 italic"
+          className="absolute px-3 italic"
         >
           and
         </span>
