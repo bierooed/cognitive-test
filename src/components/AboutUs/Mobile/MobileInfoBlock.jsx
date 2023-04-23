@@ -25,7 +25,13 @@ export default function MobileInfoBlock({
         </p>
         {!!handleFunction && (
           <button
-            onClick={() => handleFunction(true, { text, link, linkText })}
+            onClick={() =>
+              handleFunction(true, {
+                text: translate("fullText", translations, currentLang),
+                link,
+                linkText,
+              })
+            }
             className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-500 cursor-pointer"
           >
             {translate("mobileReadMoreButton", extraTexts, currentLang)}
