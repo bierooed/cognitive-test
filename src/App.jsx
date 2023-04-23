@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 
 function App() {
   const dispatch = useDispatch();
+
   return (
     <div className="text-center p-2">
       <header className="text-end">

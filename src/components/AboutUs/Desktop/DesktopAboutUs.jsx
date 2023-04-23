@@ -4,12 +4,8 @@ import scienceIllustration from "../illustrations/science.png";
 import { aboutUsTexts, scientificBasisTexts } from "../aboutUsTexts";
 import DesktopInfoBlock from "./DesktopInfoBlock";
 import Link from "../Link";
-import translate from "../../../helpers/languageSwitcher";
-import { useSelector } from "react-redux";
 
 export default function DesktopAboutUs() {
-  const currentLang = useSelector((state) => state.language.currentLang);
-
   return (
     <div className="md:flex items-center flex-col xs: hidden">
       <DesktopInfoBlock
@@ -17,9 +13,8 @@ export default function DesktopAboutUs() {
         translations={aboutUsTexts}
       />
       <Link
-        text={translate("readMore", aboutUsTexts, currentLang, {
-          source: "Wikipedia",
-        })}
+        source="Wikipedia"
+        translations={aboutUsTexts}
         link="https://en.wikipedia.org/wiki/Kaufman_Assessment_Battery_for_Children"
       />
       <div className="inline-flex items-center justify-center w-full">
@@ -36,9 +31,8 @@ export default function DesktopAboutUs() {
         translations={scientificBasisTexts}
       />
       <Link
-        text={translate("readMore", scientificBasisTexts, currentLang, {
-          source: "Science Direct",
-        })}
+        source="Science Direct"
+        translations={scientificBasisTexts}
         link="https://www.sciencedirect.com/topics/nursing-and-health-professions/kaufman-assessment-battery-for-children"
       />
     </div>
