@@ -22,31 +22,21 @@ export default function MobileAboutUs() {
         <>
           <MobileInfoBlock
             illustration={aboutUsIllustration}
-            text={translate("fullText", aboutUsTexts, currentLang)}
-            heading={translate("heading", aboutUsTexts, currentLang)}
+            translations={aboutUsTexts}
             link="https://en.wikipedia.org/wiki/Kaufman_Assessment_Battery_for_Children"
             linkText={translate("readMore", aboutUsTexts, currentLang, {
               source: "Wikipedia",
             })}
-            description={translate("description", aboutUsTexts, currentLang)}
             handleFunction={handleInfoBlock}
-            currentLang={currentLang}
           />
           <MobileInfoBlock
             illustration={scienceIllustration}
-            text={translate("fullText", scientificBasisTexts, currentLang)}
-            heading={translate("heading", scientificBasisTexts, currentLang)}
+            translations={scientificBasisTexts}
             link="https://www.sciencedirect.com/topics/nursing-and-health-professions/kaufman-assessment-battery-for-children"
             linkText={translate("readMore", scientificBasisTexts, currentLang, {
               source: "Science direct",
             })}
-            description={translate(
-              "description",
-              scientificBasisTexts,
-              currentLang
-            )}
             handleFunction={handleInfoBlock}
-            currentLang={currentLang}
           />
         </>
       ) : (

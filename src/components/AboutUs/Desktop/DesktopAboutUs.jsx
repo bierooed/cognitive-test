@@ -9,13 +9,12 @@ import { useSelector } from "react-redux";
 
 export default function DesktopAboutUs() {
   const currentLang = useSelector((state) => state.language.currentLang);
+
   return (
     <div className="md:flex items-center flex-col xs: hidden">
       <DesktopInfoBlock
         illustration={aboutUsIllustration}
-        heading={translate("heading", aboutUsTexts, currentLang)}
-        text={translate("fullText", aboutUsTexts, currentLang)}
-        description={translate("description", aboutUsTexts, currentLang)}
+        translations={aboutUsTexts}
       />
       <Link
         text={translate("readMore", aboutUsTexts, currentLang, {
@@ -34,8 +33,7 @@ export default function DesktopAboutUs() {
       </div>
       <DesktopInfoBlock
         illustration={scienceIllustration}
-        heading={translate("heading", scientificBasisTexts, currentLang)}
-        text={translate("fullText", scientificBasisTexts, currentLang)}
+        translations={scientificBasisTexts}
       />
       <Link
         text={translate("readMore", scientificBasisTexts, currentLang, {
