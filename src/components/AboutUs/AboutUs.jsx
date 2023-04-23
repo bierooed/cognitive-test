@@ -17,7 +17,7 @@ export default function AboutUs() {
   }, []);
 
   return (
-    <main className="font-medium md:px-12 xs: px-6">
+    <main className="font-medium">
       {windowWidth >= 768 && <DesktopAboutUs />}
       {windowWidth < 768 && <MobileAboutUs />}
     </main>

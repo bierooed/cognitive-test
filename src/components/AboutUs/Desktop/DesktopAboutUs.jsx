@@ -23,7 +23,7 @@ export default function DesktopAboutUs() {
           style={{ backgroundColor: "#f8f8f8" }}
           className="absolute px-3 italic"
         >
-          and
+          &
         </span>
       </div>
       <DesktopInfoBlock
