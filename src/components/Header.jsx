@@ -18,7 +18,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex md:justify-around xs: justify-between items-center pt-4 text-end">
+    <header className="mb-6 flex md:justify-around xs: justify-between items-center pt-4 text-end">
       <div>
         <button
           className={getClassname("ru")}
@@ -37,12 +37,12 @@ export default function Header() {
       <div>
         <Link
           to={paths.auth}
-          className="text-white bg-[#1b1f27] hover:bg-[#050708]/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 dark:focus:ring-blue-800"
+          className="xs: p-2 xs: text-xs text-white bg-[#1b1f27] hover:bg-[#050708]/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full md:text-sm md:p-2.5 text-center inline-flex items-center dark:focus:ring-blue-800"
         >
-          <span className="px-2">Jump to test</span>
+          <span className="xs: px-1.5 md:px-2">Jump to test</span>
           <svg
             aria-hidden="true"
-            className="w-4 h-4"
+            className="xs: w-3.5 xs: h-3.5 md:w-4 md:h-4"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
