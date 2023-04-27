@@ -1,4 +1,7 @@
-function translate(message, translations, locale, variables = null) {
+import { useSelector } from "react-redux";
+
+function translate(message, translations, variables = null) {
+  const locale = useSelector((state) => state.language.currentLang);
   const defaultLocale = !["en", "ru"].includes(locale) ? "en" : locale;
 
   let translation = translations[defaultLocale || locale][message];

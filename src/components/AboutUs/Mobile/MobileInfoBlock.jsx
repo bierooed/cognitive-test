@@ -1,7 +1,6 @@
 import React from "react";
 import translate from "../../../helpers/languageSwitcher";
 import { extraTexts } from "../aboutUsTexts";
-import { useSelector } from "react-redux";
 
 export default function MobileInfoBlock({
   illustration,
@@ -10,13 +9,11 @@ export default function MobileInfoBlock({
   source,
   handleFunction,
 }) {
-  const currentLang = useSelector((state) => state.language.currentLang);
-
   const handleReadMoreButton = () => {
     const popupContent = {
-      text: translate("fullText", translations, currentLang),
+      text: translate("fullText", translations),
       link,
-      linkText: translate("readMore", translations, currentLang, {
+      linkText: translate("readMore", translations, {
         source,
       }),
     };
@@ -30,17 +27,17 @@ export default function MobileInfoBlock({
       </div>
       <div className="p-5">
         <h5 className="mb-2 text-2xl tracking-tight">
-          {translate("heading", translations, currentLang)}
+          {translate("heading", translations)}
         </h5>
         <p className="mb-3 font-thin">
-          {translate("description", translations, currentLang)}
+          {translate("description", translations)}
         </p>
         {!!handleFunction && (
           <button
             onClick={handleReadMoreButton}
             className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-500 cursor-pointer"
           >
-            {translate("mobileReadMoreButton", extraTexts, currentLang)}
+            {translate("mobileReadMoreButton", extraTexts)}
           </button>
         )}
       </div>

@@ -9,18 +9,17 @@ import paths from "../../paths";
 
 export default function Header() {
   const { pathname } = useLocation();
-  const currentLang = useSelector((state) => state.language.currentLang);
   return (
     <header className="mb-6 flex md:justify-around xs: justify-between items-center pt-4 text-end">
       <LanguageSwitcher />
       {pathname === "/auth" ? (
         <RouterLink
-          text={translate("backHome", headerTexts, currentLang)}
+          text={translate("backHome", headerTexts)}
           path={paths.home}
         />
       ) : (
         <RouterLink
-          text={translate("jumpToTest", headerTexts, currentLang)}
+          text={translate("jumpToTest", headerTexts)}
           path={paths.auth}
         />
       )}
