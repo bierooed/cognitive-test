@@ -17,13 +17,14 @@ export default function LanguageSwitcher() {
   };
   return (
     <div>
-      {languages.map((lang, idx) => (
+      {languages.map(({ id, lang }) => (
         <button
+          key={id}
           className={getClassname(lang)}
           onClick={() => dispatch(setLang(lang))}
         >
           {lang}
-          {idx !== languages.length - 1 && <span className="px-1">/</span>}
+          {id !== languages.length - 1 && <span className="px-1">/</span>}
         </button>
       ))}
     </div>
