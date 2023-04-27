@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setLang } from "../../slices/languageSlice";
 import cn from "classnames";
+import languages from "../../languages.js";
 
 export default function LanguageSwitcher() {
   const dispatch = useDispatch();
@@ -16,19 +17,15 @@ export default function LanguageSwitcher() {
   };
   return (
     <div>
-      <button
-        className={getClassname("ru")}
-        onClick={() => dispatch(setLang("ru"))}
-      >
-        ru
-      </button>{" "}
-      /{" "}
-      <button
-        className={getClassname("en")}
-        onClick={() => dispatch(setLang("en"))}
-      >
-        en
-      </button>
+      {languages.map((lang, idx) => (
+        <button
+          className={getClassname(lang)}
+          onClick={() => dispatch(setLang(lang))}
+        >
+          {lang}
+          {idx !== languages.length - 1 && <span className="px-1">/</span>}
+        </button>
+      ))}
     </div>
   );
 }
