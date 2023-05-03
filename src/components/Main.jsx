@@ -11,6 +11,7 @@ export default function Main() {
         <Route path={paths.home} element={<AboutUs />} />
         <Route path={paths.auth} element={<Auth />} />
       </Routes>
+      <AboutUs />
     </main>
   );
 }
