@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="mx-4 mt-8">
+    <footer className="mx-4 mt-8 xs: mt-16">
       <hr className="my-4" />
       <div className="w-full mx-auto max-w-screen-xl p-4 flex md:flex-row xs: flex-col items-center md:justify-between">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">

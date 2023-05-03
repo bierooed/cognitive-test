@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import aboutUsIllustration from "../illustrations/aboutUsIllustration.png";
 import scienceIllustration from "../illustrations/science.png";
-import { aboutUsTexts, scientificBasisTexts } from "../aboutUsTexts";
 import MobileInfoBlock from "./MobileInfoBlock";
 import MobilePopupInfo from "./MobilePopupInfo";
 
@@ -18,21 +17,17 @@ export default function MobileAboutUs() {
       {textVisible === false ? (
         <>
           <MobileInfoBlock
+            infoTopic="aboutTest"
             illustration={aboutUsIllustration}
-            text={aboutUsTexts.fullText}
-            heading={aboutUsTexts.heading}
             link="https://en.wikipedia.org/wiki/Kaufman_Assessment_Battery_for_Children"
-            linkText="Read more in Wikipedia"
-            description={aboutUsTexts.description}
+            source="Wikipedia"
             handleFunction={handleInfoBlock}
           />
           <MobileInfoBlock
+            infoTopic="scientific"
             illustration={scienceIllustration}
-            text={scientificBasisTexts.fullText}
-            heading={scientificBasisTexts.heading}
             link="https://www.sciencedirect.com/topics/nursing-and-health-professions/kaufman-assessment-battery-for-children"
-            linkText="Read more in Science Direct"
-            description={scientificBasisTexts.description}
+            source="Science direct"
             handleFunction={handleInfoBlock}
           />
         </>

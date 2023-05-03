@@ -1,7 +1,6 @@
 import React from "react";
 import aboutUsIllustration from "../illustrations/aboutUsIllustration.png";
 import scienceIllustration from "../illustrations/science.png";
-import { aboutUsTexts, scientificBasisTexts } from "../aboutUsTexts";
 import DesktopInfoBlock from "./DesktopInfoBlock";
 import Link from "../Link";
 
@@ -9,13 +8,11 @@ export default function DesktopAboutUs() {
   return (
     <div className="md:flex items-center flex-col xs: hidden">
       <DesktopInfoBlock
+        infoTopic="aboutTest"
         illustration={aboutUsIllustration}
-        heading={aboutUsTexts.heading}
-        text={aboutUsTexts.fullText}
-        description={aboutUsTexts.description}
       />
       <Link
-        text="Read more in Wikipedia"
+        source="Wikipedia"
         link="https://en.wikipedia.org/wiki/Kaufman_Assessment_Battery_for_Children"
       />
       <div className="inline-flex items-center justify-center w-full">
@@ -24,16 +21,15 @@ export default function DesktopAboutUs() {
           style={{ backgroundColor: "#f8f8f8" }}
           className="absolute px-3 italic"
         >
-          and
+          &
         </span>
       </div>
       <DesktopInfoBlock
+        infoTopic="scientific"
         illustration={scienceIllustration}
-        heading={scientificBasisTexts.heading}
-        text={scientificBasisTexts.fullText}
       />
       <Link
-        text="Read more in Science Direct"
+        source="Science Direct"
         link="https://www.sciencedirect.com/topics/nursing-and-health-professions/kaufman-assessment-battery-for-children"
       />
     </div>
