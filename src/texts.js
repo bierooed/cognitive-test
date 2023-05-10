@@ -27,6 +27,17 @@ const texts = {
     jumpToTest: "Jump to test",
     auth: "Authorization",
     mobileReadMoreButton: "Read more",
+
+    signUpHeading: "Sign Up",
+    signInHeading: "Log in to your account",
+    signInBtnText: "Sign In",
+    signUpBtnText: "Create account",
+    signUpExtraText: "Already have an account?",
+    signInExtraText: "Don't have an account?",
+
+    emailPlaceholder: "Email",
+    passwordPlaceholder: "Password",
+    fullNamePlaceholder: "Full name",
   },
   ru: {
     aboutTestHeading: "Тест Кауфмана",
@@ -53,6 +64,17 @@ const texts = {
     jumpToTest: "Перейти к тесту",
     auth: "Авторизация",
     mobileReadMoreButton: "Подробнее",
+
+    signUpHeading: "Зарегистрироваться",
+    signInHeading: "Войдите в свой аккаунт",
+    signInBtnText: "Войти",
+    signUpBtnText: "Создать аккаунт",
+    signUpExtraText: "Уже зарегистрированы?",
+    signInExtraText: "Нет аккаунта?",
+
+    emailPlaceholder: "Электронная почта",
+    passwordPlaceholder: "Пароль",
+    fullNamePlaceholder: "Полное имя",
   },
 };
 

@@ -12,12 +12,12 @@ export default function Header() {
   return (
     <header className="mb-6 flex md:justify-around xs: justify-between items-center pt-4 text-end">
       <LanguageSwitcher />
-      {pathname === "/auth" ? (
+      {pathname === "/signIn" || pathname === "/signUp" ? (
         <RouterLink text={translate("backHome")} path={paths.home} />
       ) : isAuth ? (
         <RouterLink text={translate("jumpToTest")} path={paths.auth} />
       ) : (
-        <RouterLink text={translate("auth")} path={paths.auth} />
+        <RouterLink text={translate("auth")} path={paths.signUp} />
       )}
     </header>
   );
