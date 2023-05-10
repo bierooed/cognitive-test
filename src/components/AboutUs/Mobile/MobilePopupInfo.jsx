@@ -28,6 +28,7 @@ export default function MobilePopupInfo({
       {!!link && (
         <a
           href={link}
+          target="_blank"
           className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
         >
           {linkText}
