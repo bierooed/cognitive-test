@@ -25,6 +25,7 @@ const texts = {
 
     backHome: "Back home",
     jumpToTest: "Jump to test",
+    auth: "Authorization",
     mobileReadMoreButton: "Read more",
   },
   ru: {
@@ -50,6 +51,7 @@ const texts = {
 
     backHome: "На главную",
     jumpToTest: "Перейти к тесту",
+    auth: "Авторизация",
     mobileReadMoreButton: "Подробнее",
   },
 };
