@@ -15,9 +15,9 @@ export default function Header() {
       {pathname === "/signIn" || pathname === "/signUp" ? (
         <RouterLink text={translate("backHome")} path={paths.home} />
       ) : isAuth ? (
-        <RouterLink text={translate("jumpToTest")} path={paths.auth} />
+        <RouterLink text={translate("jumpToTest")} path={paths.home} />
       ) : (
-        <RouterLink text={translate("auth")} path={paths.signUp} />
+        <RouterLink text={translate("auth")} path={paths.signIn} />
       )}
     </header>
   );

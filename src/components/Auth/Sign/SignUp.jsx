@@ -3,6 +3,7 @@ import Input from "./Input";
 
 import hideIcon from "./icons/hide.png";
 import viewIcon from "./icons/view.png";
+import translate from "../../../helpers/languageSwitcher";
 
 export default function SignUp() {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -24,6 +25,9 @@ export default function SignUp() {
           )}
         </span>
       </div>
+      <button className="w-full text-center text-white py-3 rounded bg-green bg-indigo-400 hover:bg-indigo-500 focus:outline-none my-1">
+        {translate("signUpBtnText")}
+      </button>
     </>
   );
 }

@@ -17,7 +17,6 @@ export default function Main() {
             <Auth
               type="signUp"
               heading={translate("signUpHeading")}
-              btnText={translate("signUpBtnText")}
               authExtraText={translate("signUpExtraText")}
               authExtraPath="/signIn"
             />
@@ -29,7 +28,6 @@ export default function Main() {
             <Auth
               type="signIn"
               heading={translate("signInHeading")}
-              btnText={translate("signInBtnText")}
               authExtraText={translate("signInExtraText")}
               authExtraPath="/signUp"
             />
