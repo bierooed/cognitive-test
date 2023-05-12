@@ -8,6 +8,9 @@ import { setAuth, setUserCredintals } from "./slices/authSlice";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import auth from "./firebase";
 import { useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import notify from "./helpers/notify";
 
 function App() {
   const dispatch = useDispatch();
@@ -19,38 +22,46 @@ function App() {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         dispatch(setUserCredintals({ email: user.email }));
+        notify("Successful signed in!", "success");
       } else {
-        if (pathname !== "/") {
+        if (!["/", "/signIn", "signUp"].includes(pathname)) {
           navigate("/");
+          notify(
+            "Please, log in to your account to access the website functionality!",
+            "info"
+          );
         }
       }
     });
   }, []);
 
   return (
-    <div className="text-center md:px-12 xs: px-4">
-      {!!userCredintals.email && (
-        <div className="">
-          <h1>{userCredintals.email}</h1>
-          <button
-            onClick={() => {
-              signOut(auth)
-                .then(() => {
-                  console.log("SUCCESSFUL SIGN OUT");
-                  dispatch(setAuth(false));
-                  dispatch(setUserCredintals({}));
-                })
-                .catch((error) => console.log(error));
-            }}
-          >
-            Log Out
-          </button>
-        </div>
-      )}
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <>
+      <ToastContainer />
+      <div className="text-center md:px-12 xs: px-4">
+        {!!userCredintals.email && (
+          <div className="">
+            <h1>{userCredintals.email}</h1>
+            <button
+              onClick={() => {
+                signOut(auth)
+                  .then(() => {
+                    console.log("SUCCESSFUL SIGN OUT");
+                    dispatch(setAuth(false));
+                    dispatch(setUserCredintals({}));
+                  })
+                  .catch((error) => console.log(error));
+              }}
+            >
+              Log Out
+            </button>
+          </div>
+        )}
+        <Header />
+        <Main />
+        <Footer />
+      </div>
+    </>
   );
 }
 
