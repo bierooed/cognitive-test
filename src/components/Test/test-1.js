@@ -1,6 +1,7 @@
 async function importImage(imagePath) {
-  const image = await import(/* @vite-ignore */ imagePath);
-  return image.default;
+  return await import(/* @vite-ignore */ imagePath).then(
+    (image) => image.default
+  );
 }
 
 const CTtest = [

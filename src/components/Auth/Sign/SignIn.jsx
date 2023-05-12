@@ -7,6 +7,7 @@ import auth from "../../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import paths from "../../../paths";
 import { useNavigate } from "react-router-dom";
+import notify from "../../../helpers/notify";
 
 export default function SignIn() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ export default function SignIn() {
       .then((user) => {
         navigate("/");
         dispatch(setAuth(true));
+        notify("Successful signed in!", "success");
       })
       .catch((err) => console.log(err));
   };

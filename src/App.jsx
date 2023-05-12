@@ -22,7 +22,6 @@ function App() {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         dispatch(setUserCredintals({ email: user.email }));
-        notify("Successful signed in!", "success");
       } else {
         if (!["/", "/signIn", "signUp"].includes(pathname)) {
           navigate("/");
@@ -49,6 +48,7 @@ function App() {
                     console.log("SUCCESSFUL SIGN OUT");
                     dispatch(setAuth(false));
                     dispatch(setUserCredintals({}));
+                    navigate("/");
                   })
                   .catch((error) => console.log(error));
               }}
