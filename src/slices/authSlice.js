@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   isAuth: false,
+  userCredintals: {},
   signIn: {
     email: "",
     password: "",
@@ -15,6 +16,10 @@ const authSlice = createSlice({
   reducers: {
     setAuth: (state, { payload }) => {
       state.isAuth = payload;
+    },
+
+    setUserCredintals: (state, { payload }) => {
+      state.userCredintals = payload;
     },
 
     setSignInInfo: (state, { payload }) => {

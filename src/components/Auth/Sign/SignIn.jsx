@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Input from "./Input";
-import { setSignInInfo } from "../../../slices/authSlice";
+import { setAuth, setSignInInfo } from "../../../slices/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import translate from "../../../helpers/languageSwitcher";
 import auth from "../../../firebase";
@@ -21,6 +21,7 @@ export default function SignIn() {
     signInWithEmailAndPassword(auth, email, password)
       .then((user) => {
         navigate("/");
+        dispatch(setAuth(true));
       })
       .catch((err) => console.log(err));
   };

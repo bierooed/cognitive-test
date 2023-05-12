@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
@@ -7,34 +7,38 @@ import { useDispatch, useSelector } from "react-redux";
 import { setAuth, setUserCredintals } from "./slices/authSlice";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import auth from "./firebase";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
+  const { userCredintals } = useSelector((state) => state.auth);
+  const { pathname } = useLocation();
   const navigate = useNavigate();
-  const [user, setUser] = useState();
+
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        dispatch(setAuth(true));
-        setUser(user);
+        dispatch(setUserCredintals({ email: user.email }));
       } else {
-        dispatch(setAuth(false));
+        if (pathname !== "/") {
+          navigate("/");
+        }
       }
     });
   }, []);
 
   return (
     <div className="text-center md:px-12 xs: px-4">
-      {!!user && (
+      {!!userCredintals.email && (
         <div className="">
-          <h1>{user.email}</h1>
+          <h1>{userCredintals.email}</h1>
           <button
             onClick={() => {
               signOut(auth)
                 .then(() => {
                   console.log("SUCCESSFUL SIGN OUT");
-                  setUser(null);
+                  dispatch(setAuth(false));
+                  dispatch(setUserCredintals({}));
                 })
                 .catch((error) => console.log(error));
             }}
