@@ -1,28 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import CTtest from "./test-1";
+import { useDispatch, useSelector } from "react-redux";
+import { setCTanswer } from "../../slices/testSlice";
+import AnswerOptions from "./AnswerOptions";
 
 export default function Test() {
+  const { CTtestAnswers } = useSelector((state) => state.test);
+  const [currentQuestionId, setCurrentQuestionId] = useState(0);
+  const { id, description, images, answer } = CTtest[currentQuestionId];
+  console.log(CTtestAnswers);
   return (
     <div className="flex justify-center">
       <div>
-        {CTtest.map(({ id, description, images, answer }) => {
-          return (
-            <div key={id}>
-              <h1>{description}</h1>
-              <h1>Right answer - {answer}</h1>
-              <div className="w-full flex items-center justify-between flex-wrap">
-                {images.map((src, idx) => {
-                  return (
-                    <div key={idx + 1}>
-                      <img className="w-64 p-2" src={src} />
-                      <input type="checkbox" />
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+        <AnswerOptions
+          id={id}
+          description={description}
+          images={images}
+          answer={answer}
+          currentQuestionId={currentQuestionId}
+          handleCurrentQuestionId={(value) => setCurrentQuestionId(value)}
+        />
       </div>
     </div>
   );
