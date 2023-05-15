@@ -18,18 +18,31 @@ function App() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
+  const changeLocation = (msg, type, ...paths) => {
+    if (![...paths].includes(pathname)) {
+      navigate("/");
+      notify(msg, type);
+    }
+  };
+
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         dispatch(setUserCredintals({ email: user.email }));
+        changeLocation(
+          "Already logged in to your account",
+          "info",
+          "/",
+          "/test"
+        );
       } else {
-        if (!["/", "/signIn", "signUp"].includes(pathname)) {
-          navigate("/");
-          notify(
-            "Please, log in to your account to access the website functionality!",
-            "info"
-          );
-        }
+        changeLocation(
+          "Please, log in to your account to access the website functionality!",
+          "info",
+          "/",
+          "/signUp",
+          "/signIn"
+        );
       }
     });
   }, []);
