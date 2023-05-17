@@ -29,6 +29,7 @@ function App() {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         dispatch(setUserCredintals({ email: user.email }));
+        dispatch(setAuth(true));
         changeLocation(
           "Already logged in to your account",
           "info",
