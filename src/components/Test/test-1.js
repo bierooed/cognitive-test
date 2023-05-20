@@ -8,7 +8,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//1_1.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//1_2.jpg",
     ],
-    answer: "4",
+    answer: 4,
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//2_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//2_1.jpg",
     ],
-    answer: "3",
+    answer: 3,
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//3_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//3_3.jpg",
     ],
-    answer: "2",
+    answer: 2,
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//4_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//4_3.jpg",
     ],
-    answer: "3",
+    answer: 3,
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//5_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//5_3.jpg",
     ],
-    answer: "4",
+    answer: 4,
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//6_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//6_3.jpg",
     ],
-    answer: "4",
+    answer: 4,
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//7_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//7_3.jpg",
     ],
-    answer: "2",
+    answer: 2,
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//8_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//8_3.jpg",
     ],
-    answer: "1",
+    answer: 1,
   },
   {
     id: 9,
@@ -96,7 +96,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//9_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//9_3.jpg",
     ],
-    answer: "1",
+    answer: 1,
   },
   {
     id: 10,
@@ -107,7 +107,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//10_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//10_3.jpg",
     ],
-    answer: "3",
+    answer: 3,
   },
   {
     id: 11,
@@ -118,7 +118,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//11_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//11_3.jpg",
     ],
-    answer: "3",
+    answer: 3,
   },
   {
     id: 12,
@@ -129,7 +129,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//12_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//12_3.jpg",
     ],
-    answer: "2",
+    answer: 2,
   },
   {
     id: 13,
@@ -140,7 +140,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//13_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//13_3.jpg",
     ],
-    answer: "1",
+    answer: 1,
   },
   {
     id: 14,
@@ -151,7 +151,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//14_2.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//14_3.jpg",
     ],
-    answer: "2",
+    answer: 2,
   },
   {
     id: 15,
@@ -163,7 +163,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//15_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//15_5.jpg",
     ],
-    answer: "5",
+    answer: 5,
   },
   {
     id: 16,
@@ -175,7 +175,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//16_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//16_5.jpg",
     ],
-    answer: "2",
+    answer: 2,
   },
   {
     id: 17,
@@ -187,7 +187,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//17_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//17_5.jpg",
     ],
-    answer: "4",
+    answer: 4,
   },
   {
     id: 18,
@@ -199,7 +199,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//18_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//18_5.jpg",
     ],
-    answer: "5",
+    answer: 5,
   },
   {
     id: 19,
@@ -211,7 +211,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//19_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//19_5.jpg",
     ],
-    answer: "2",
+    answer: 2,
   },
   {
     id: 20,
@@ -223,7 +223,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//20_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//20_5.jpg",
     ],
-    answer: "1",
+    answer: 1,
   },
   {
     id: 21,
@@ -235,7 +235,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//21_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//21_5.jpg",
     ],
-    answer: "2",
+    answer: 2,
   },
   {
     id: 22,
@@ -247,7 +247,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//22_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//22_5.jpg",
     ],
-    answer: "3",
+    answer: 3,
   },
   {
     id: 23,
@@ -259,7 +259,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//23_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//23_5.jpg",
     ],
-    answer: "4",
+    answer: 4,
   },
   {
     id: 24,
@@ -271,7 +271,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//24_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//24_5.jpg",
     ],
-    answer: "1",
+    answer: 1,
   },
   {
     id: 25,
@@ -283,7 +283,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//25_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//25_5.jpg",
     ],
-    answer: "2",
+    answer: 2,
   },
   {
     id: 26,
@@ -295,7 +295,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//26_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//26_5.jpg",
     ],
-    answer: "4",
+    answer: 4,
   },
   {
     id: 27,
@@ -307,7 +307,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//27_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//27_5.jpg",
     ],
-    answer: "4",
+    answer: 4,
   },
   {
     id: 28,
@@ -319,7 +319,7 @@ const CTtest = [
       "/src/components/Test/testsImg/ConceptualThinking//28_3.jpg",
       "/src/components/Test/testsImg/ConceptualThinking//28_5.jpg",
     ],
-    answer: "1",
+    answer: 1,
   },
 ];
 

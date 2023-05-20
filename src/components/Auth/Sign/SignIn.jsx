@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Input from "./Input";
 import { setAuth, setSignInInfo } from "../../../slices/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import translate from "../../../helpers/languageSwitcher";
-import auth from "../../../firebase";
+
 import { signInWithEmailAndPassword } from "firebase/auth";
-import paths from "../../../paths";
 import { useNavigate } from "react-router-dom";
 import notify from "../../../helpers/notify";
+import { auth } from "../../../firebase";
 
 export default function SignIn() {
   const dispatch = useDispatch();

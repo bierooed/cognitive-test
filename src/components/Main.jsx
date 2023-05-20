@@ -6,6 +6,7 @@ import paths from "../paths";
 import Auth from "./Auth/Auth";
 import translate from "../helpers/languageSwitcher";
 import Test from "./Test/Test";
+import Result from "./Test/Result";
 
 export default function Main() {
   return (
@@ -35,6 +36,7 @@ export default function Main() {
           }
         />
         <Route path={paths.test} element={<Test />} />
+        <Route path={paths.result} element={<Result />} />
       </Routes>
     </main>
   );

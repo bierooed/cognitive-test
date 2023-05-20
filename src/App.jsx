@@ -6,7 +6,7 @@ import Header from "./components/Header/Header";
 import { useDispatch, useSelector } from "react-redux";
 import { setAuth, setUserCredintals } from "./slices/authSlice";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import auth from "./firebase";
+import { auth } from "./firebase";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -34,7 +34,8 @@ function App() {
           "Already logged in to your account",
           "info",
           "/",
-          "/test"
+          "/test",
+          "/result"
         );
       } else {
         changeLocation(
