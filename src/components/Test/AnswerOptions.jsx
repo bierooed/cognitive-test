@@ -1,11 +1,18 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import AnswerOption from "./AnswerOption";
 import { Link } from "react-router-dom";
 import paths from "../../paths";
-import { collection, addDoc, setDoc, doc } from "firebase/firestore";
+import { setDoc, doc } from "firebase/firestore";
 import { auth, db } from "../../firebase";
 import CTtest from "./test-1";
+
+import * as tf from "@tensorflow/tfjs";
+import * as speech from "@tensorflow-models/speech-commands";
+
+import microphoneIcon from "./icons/microphone-icon.png";
+import translate from "../../helpers/languageSwitcher";
+import { setCTanswer } from "../../slices/testSlice";
 
 export default function AnswerOptions({
   id,
@@ -16,6 +23,12 @@ export default function AnswerOptions({
   handleCurrentQuestionId,
 }) {
   const [checkedId, setCheckedId] = useState(null);
+  const [model, setModel] = useState(null);
+  const [action, setAction] = useState(null);
+  const [labels, setLabels] = useState(null);
+
+  const dispatch = useDispatch();
+
   const handleRadio = (id) => setCheckedId(id);
 
   const { CTtestAnswers } = useSelector((state) => state.test);
@@ -29,6 +42,50 @@ export default function AnswerOptions({
     } catch (e) {
       console.error("Error adding document: ", e);
     }
+  };
+
+  const loadModel = async () => {
+    const recognizer = await speech.create("BROWSER_FFT");
+    await recognizer.ensureModelLoaded();
+
+    setModel(recognizer);
+    setLabels(recognizer.wordLabels());
+  };
+
+  useEffect(() => {
+    loadModel();
+  }, []);
+
+  const argMax = (arr) => {
+    return arr
+      .map((x, i) => [x, i])
+      .reduce((acc, el) => (el[0] > acc[0] ? el : acc))[1];
+  };
+
+  const recognizeCommands = async () => {
+    const commands = {
+      one: 1,
+      two: 2,
+      three: 3,
+      four: 4,
+    };
+    console.log("Listening for commands");
+    model.listen(
+      (res) => {
+        const maxAction = argMax(Object.values(res.scores));
+        setAction(labels[maxAction]);
+        handleRadio(commands[labels[argMax(Object.values(res.scores))]]);
+        dispatch(
+          setCTanswer({
+            questionId: id,
+            correctAnswer: answer,
+            choosenAnswer: commands[labels[maxAction]],
+          })
+        );
+        !!res.scores && model.stopListening();
+      },
+      { includeSpectrogram: true, probabilityThreshold: 0.9 }
+    );
   };
 
   return (
@@ -50,7 +107,7 @@ export default function AnswerOptions({
         })}
       </div>
       <div className="flex justify-center mt-8">
-        <div className="flex flex-row mx-auto">
+        <div className="flex flex-row mx-auto items-center">
           {id < CTtest.length ? (
             <button
               disabled={typeof checkedId !== "number"}
@@ -73,8 +130,16 @@ export default function AnswerOptions({
               See result
             </Link>
           )}
+          <img
+            className="w-6 h-6 ml-8 cursor-pointer"
+            src={microphoneIcon}
+            onClick={recognizeCommands}
+          />
         </div>
       </div>
+      <p className="mt-2 italic text-gray-400 text-sm">
+        {translate("answerChoosingGuide")}
+      </p>
     </div>
   );
 }

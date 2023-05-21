@@ -31,6 +31,7 @@ export default function Result() {
     getResult();
   }, []);
 
+  console.log(userAnswers);
   return (
     userAnswers.length > 0 && (
       <div>

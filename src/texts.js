@@ -38,6 +38,9 @@ const texts = {
     emailPlaceholder: "Email",
     passwordPlaceholder: "Password",
     fullNamePlaceholder: "Full name",
+
+    answerChoosingGuide:
+      "Choose an answer manually or speak it by pressing the microphone button and saying the words 'one', 'two', 'three', 'four'",
   },
   ru: {
     aboutTestHeading: "Тест Кауфмана",
@@ -75,6 +78,9 @@ const texts = {
     emailPlaceholder: "Электронная почта",
     passwordPlaceholder: "Пароль",
     fullNamePlaceholder: "Полное имя",
+
+    answerChoosingGuide:
+      "Выберите ответ вручную или произнесите его, нажав кнопку микрофона и произнеся слова 'one', 'two', 'three', 'four'",
   },
 };
 
