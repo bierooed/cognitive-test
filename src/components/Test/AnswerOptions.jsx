@@ -24,7 +24,6 @@ export default function AnswerOptions({
 }) {
   const [checkedId, setCheckedId] = useState(null);
   const [model, setModel] = useState(null);
-  const [action, setAction] = useState(null);
   const [labels, setLabels] = useState(null);
 
   const dispatch = useDispatch();
@@ -72,9 +71,9 @@ export default function AnswerOptions({
     console.log("Listening for commands");
     model.listen(
       (res) => {
+        console.log(res);
         const maxAction = argMax(Object.values(res.scores));
-        setAction(labels[maxAction]);
-        handleRadio(commands[labels[argMax(Object.values(res.scores))]]);
+        handleRadio(commands[labels[maxAction]]);
         dispatch(
           setCTanswer({
             questionId: id,
