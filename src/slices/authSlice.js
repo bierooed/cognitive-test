@@ -7,6 +7,12 @@ const initialState = {
     email: "",
     password: "",
   },
+
+  signUp: {
+    email: "",
+    fullName: "",
+    password: "",
+  },
 };
 
 const authSlice = createSlice({
@@ -15,7 +21,6 @@ const authSlice = createSlice({
 
   reducers: {
     setAuth: (state, { payload }) => {
-      console.log(payload);
       state.isAuth = payload;
     },
 
@@ -26,9 +31,14 @@ const authSlice = createSlice({
     setSignInInfo: (state, { payload }) => {
       state.signIn[payload.type] = payload.value;
     },
+
+    setSignUpInfo: (state, { payload }) => {
+      state.signUp[payload.type] = payload.value;
+    },
   },
 });
 
-export const { setAuth, setSignInInfo, setUserCredintals } = authSlice.actions;
+export const { setAuth, setSignInInfo, setSignUpInfo, setUserCredintals } =
+  authSlice.actions;
 
 export default authSlice.reducer;

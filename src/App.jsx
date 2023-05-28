@@ -21,7 +21,9 @@ function App() {
   const changeLocation = (msg, type, ...paths) => {
     if (![...paths].includes(pathname)) {
       navigate("/");
-      notify(msg, type);
+      if (msg.length > 0 && type.lenght > 0) {
+        notify(msg, type);
+      }
     }
   };
 
@@ -30,13 +32,8 @@ function App() {
       if (user) {
         dispatch(setUserCredintals({ email: user.email }));
         dispatch(setAuth(true));
-        changeLocation(
-          "Already logged in to your account",
-          "info",
-          "/",
-          "/test",
-          "/result"
-        );
+        console.log(pathname);
+        changeLocation("/", "/test", "/result");
       } else {
         changeLocation(
           "Please, log in to your account to access the website functionality!",
